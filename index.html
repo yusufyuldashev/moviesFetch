@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: sans-serif;
+    }
+
+    .container {
+        width: 1140px;
+        margin: 0 auto;
+    }
+
+    #movie__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        list-style: none;
+    }
+
+    #movie__item {
+        margin-bottom: 30px;
+        width: 18%;
+        background: #eee;
+        box-shadow: 0 8px 8px -4px lightblue;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    #movie__img {
+        width: 200px;
+        height: 250px;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+    }
+
+    #movie__title {
+        font-size: 20px;
+        color: red;
+
+        padding: 10px 0;
+    }
+
+    #movie__type {
+        padding: 10px 0;
+        color: rgb(0, 38, 255);
+        font-size: 20px;
+    }
+
+    #movie__year {
+        padding: 10px 0;
+    }
+
+    #movie__imdbi {
+        padding: 10px 0;
+    }
+
+    #spinner__img {
+
+        margin: 0 auto;
+    }
+
+    .btn-group {
+        display: flex;
+        justify-content: center;
+    }
+
+    #prev {
+        margin: 10px 20px;
+    }
+
+    #next {
+        margin: 10px 20px;
+    }
+
+    #search-input {
+        margin: 5px 0;
+    }
+
+    #select-type {
+        margin: 5px 15px;
+    }
+</style>
+<title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Movies</h1>
+        <div class="btn-group">
+            <input placeholder="search movie.." name="input" type="text" id="search-input">
+            <select name="select" id="select-type">
+                <option value="movie">Movies</option>
+                <option value="series">Series</option>
+                <option value="episode">Episode</option>
+            </select>
+            <button id="prev">prev</button>
+            <button id="next">next</button>
+        </div>
+
+
+        <ul id="movie__list"></ul>
+    </div>
+    <template id="movie__template">
+        <li id="movie__item">
+            <img src="http://via.placeholder/100x150" id="movie__img" alt="img">
+            <h2 id="movie__title">Movie title</h2>
+            <p id="movie__type"> Movie type</p>
+            <p id="movie__year">1999</p>
+            <p id="movie__imdbi">imdbId</p>
+
+        </li>
+    </template>
+
+  
+
+    <script src="./util.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
